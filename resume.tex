@@ -17,13 +17,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
 \title{Resume}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-
+\usepackage{listings}
 \name{William Guss} % Your name
 \address{2650 Durant Ave. Cheney \#507. \\ Berkeley, CA 94720 } % Your address
 \address{(801)~$\cdot$~891~$\cdot$~0781 \\ wguss@berkeley.edu \\ github.com/MadcowD} % Your phone number and email
@@ -31,54 +31,56 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%   EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Education}
 
 {\bf University of California, Berkeley} \hfill {\em August 2015-2019} \\ 
 Expected B.S. in  Electrical Engineering \& Computer Science\\
-Expected B.A. in Applied Mathematics \\
+Expected B.A. in Pure Mathematics \\
 Regents' and Chancellor's Scholar (\textit{Highest honor awarded to incoming undergraduates}) \\
-Current Coursework: Data Structures (\textit{CS 61B}), {Honors} Real Analysis (\textit{MATH H104}), Linear Algebra \& Differential Equations (\textit{MATH 54}). 
+Coursework: Data Structures, {Honors} Real Analysis, Linear Algebra \& Differential Equations, Topological Measure Theory,
+Machine Learning. \\
+Overall GPA: 3.7 \\
+
 
 {\bf University of Utah} \hfill {\em August 2013 - May 2015} \\ 
 Nonmatriculate in Mathematics \& Computer Science \\
-CS2420: Algorithms and Data Structures (A-) \\
-Overall GPA: 3.933 (18 units) \\
+CS2420: Algorithms and Data Structures \\
+Overall GPA: 3.9 (18 units) \\
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%   WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{LeapYear}{October 2015 - Present}{Machine Learning Intern}{Berkeley, California}
-\item Theorizing and implementing $\epsilon$-differentially private deep neural network algorithm in Python.
+\begin{rSubsection}{Machine Learning at Berkeley}{December 2015 - Present}{Founder/Director of Research}{Berkeley, California}
+\item Theorized and implemented new ML algorithm, \texttt{Functional Neural Networks}. Presented work at the Intel International Science Fair. Published to ICML 2016.
+\item Project Manager on \texttt{OpenBrain}, a massively asynchronous recurrent neurocomputational approach to AGI.
+\item Researching \texttt{Deep Active Learning}, a bridge between deep learning and active learning using policy/selection steps inspired by Alpha Go.
+\end{rSubsection}
+
+
+\begin{rSubsection}{Personal Projects}{}{}{}
+\item Developed \texttt{DeepLearn.NET}, an open source C\# neural network learning framework.
+\item Created novel gradient descent method for feed forward ANNs and applied the algorithm to breast cancer diagnostics (mammography and FNA) with 99.8\% error rate. Presented at the University of Utah Global Health Conference. Won United States Congressional App Challenge.  
+\item Implemented \texttt{git} from scratch in java with support for remotes, diffs, and most connonical features.
+\end{rSubsection}
+\begin{rSubsection}{LeapYear}{October 2015 - December 2015}{Machine Learning Intern}{Berkeley, California}
+\item Theorized and implemented $\epsilon$-differentially private deep neural network algorithm in Python.
 \item Working with team on web-api using Django RESTful.
 \end{rSubsection}
-
-
-\begin{rSubsection}{Databa.it Research}{October 2013 - Present}{Lead Developer/Machine Learning Researcher}{Salt Lake City, Utah}
-\item Theorized and implemented new ML algorithm, Functional Neural Networks. Presented work at the Intel International Science Fair. Submitting paper to NIPS.
-\item Developed DeepLearn.NET, an open source C\# deep learning framework.
-\item Created novel gradient descent method for feed forward ANNs and applied the algorithm to breast cancer diagnostics (mammography and FNA) with 99.8\% error rate. Presented at the University of Utah Global Health Conference. Won United States Congressional App Challenge.  
-\end{rSubsection}
-
-\begin{rSubsection}{West Connect (wconnect.org)}{August 2014- December 2015}{Full Stack Web Developer}{Salt Lake City, Utah}
-\item Developed backend (Node.js) integration with Facebook OAuth/Google Maps API.
-\item Designed UI with conjunction with Ember.js/Bootstrap/Handlebars/JQuery
-\end{rSubsection}
-
 \begin{rSubsection}{University of Utah Musculoskeletal Research Lab}{Summer 2014}{Intern/Developer}{Salt Lake City, Utah}
 \item Parallelized C++ finite element solver using OpenMP and Blelloch Scans.
 \end{rSubsection}
 
 \begin{rSubsection}{Lost Code Studios}{August 2012 - June 2014}{Lead Developer}{Salt Lake City, Utah}
-\item Published "Space Hordes" to Xbox Live Indie Marketplace
-\item Created component oriented entity framework for game development in C\# and Java.
+\item Published \texttt{Space Hordes} to Xbox Live Indie Marketplace
+\item Created component oriented entity framework, \texttt{GameLib/GameLibJ} for game development in C\# and Java.
 \item First prize in IGDA Salt Lake City - Global Game Jam (2013,2014).
 \end{rSubsection}
 
@@ -90,7 +92,7 @@ Overall GPA: 3.933 (18 units) \\
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
+%   TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Technical Skills}
@@ -105,7 +107,7 @@ Github Score & 473
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
+%   EXAMPLE SECTION
 %----------------------------------------------------------------------------------------
 
 %\begin{rSection}{Section Name}
