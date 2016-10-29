@@ -21,11 +21,18 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
+% math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathabx}
+
+
 \title{Resume}
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \usepackage{listings}
 \name{William Guss} % Your name
-\address{2650 Durant Ave. Cheney \#507. \\ Berkeley, CA 94720 } % Your address
+\address{ \#507. \\ Berkeley, CA 94720 } % Your address
 \address{(801)~$\cdot$~891~$\cdot$~0781 \\ wguss@berkeley.edu \\ github.com/MadcowD} % Your phone number and email
 
 \begin{document}
@@ -36,18 +43,17 @@
 
 \begin{rSection}{Education}
 
-{\bf University of California, Berkeley} \hfill {\em August 2015-2019} \\ 
+{\bf University of California, Berkeley} \hfill {\em August 2015-2017} \\ 
 Expected B.S. in  Electrical Engineering \& Computer Science\\
 Expected B.A. in Pure Mathematics \\
-Regents' and Chancellor's Scholar (\textit{Highest honor awarded to incoming undergraduates}) \\
-Coursework: Data Structures, {Honors} Real Analysis, Linear Algebra \& Differential Equations, Topological Measure Theory,
+Regents' and Chancellor's Scholar (\textit{Highest honor awarded to incoming students}) \\
+Coursework: Data Structures, {Honors} Real Analysis, Metamathematics, Algebraic Topology, Abstract Algebra, Neurocomputation, Topological Measure Theory, 
 Machine Learning. \\
 Overall GPA: 3.7 \\
 
 
 {\bf University of Utah} \hfill {\em August 2013 - May 2015} \\ 
 Nonmatriculate in Mathematics \& Computer Science \\
-CS2420: Algorithms and Data Structures \\
 Overall GPA: 3.9 (18 units) \\
 
 \end{rSection}
@@ -58,19 +64,27 @@ Overall GPA: 3.9 (18 units) \\
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{Machine Learning at Berkeley}{December 2015 - Present}{Founder/Director of Research}{Berkeley, California}
-\item Theorized and implemented new ML algorithm, \texttt{Functional Neural Networks}. Presented work at the Intel International Science Fair. Published to ICML 2016.
+\begin{rSubsection}{Advisory Positions}{ }{}{Berkeley, California}
+\item \emph{Advisory Board at \textbf{Bonsai AI}}: Guiding the development of concept-learning for robotics. \hfill \emph{August 2016 -}
+\item \emph{Advisor for Applied Machine Learning at \textbf{DB Tech}}: Advising development of ML consultation model. \hfill \emph{April 2016 - }
+\end{rSubsection}
+
+\begin{rSubsection}{Bonsai AI}{May 2016 - Present}{Machine Learning Engineer}{Berkeley, California}
+\item Architected and implemented the new AI/ML backend for classification and deep reinforcement learning.
+\item Designed and implemented HyperLearner, a generative hyper parameter suggestion backend for metamachine learning optimization using manifold embeddings.
+\item Built neural network descriptor language for deep deterministic policy gradient (DDPG) learning.
+\item Built training interface for OpenAI Gym.
+\end{rSubsection}
+
+\begin{rSubsection}{Machine Learning at Berkeley}{October 2015 - Present}{Director of Research}{Berkeley, California}
+\item Theorized and implemented new ML algorithm, \texttt{Generalized Artificial Neural Networks}. Presented work at Microsoft Research Symposium. Submitted to NIPS 2016.
 \item Project Manager on \texttt{OpenBrain}, a massively asynchronous recurrent neurocomputational approach to AGI.
 \item Researching \texttt{Deep Active Learning}, a bridge between deep learning and active learning using policy/selection steps inspired by Alpha Go.
+\item Successfully launched and managed 6 research teams expected for publication in late 2016.
 \end{rSubsection}
 
 
-\begin{rSubsection}{Personal Projects}{}{}{}
-\item Developed \texttt{DeepLearn.NET}, an open source C\# neural network learning framework.
-\item Created novel gradient descent method for feed forward ANNs and applied the algorithm to breast cancer diagnostics (mammography and FNA) with 99.8\% error rate. Presented at the University of Utah Global Health Conference. Won United States Congressional App Challenge.  
-\item Implemented \texttt{git} from scratch in java with support for remotes, diffs, and most connonical features.
-\end{rSubsection}
-\begin{rSubsection}{LeapYear}{October 2015 - December 2015}{Machine Learning Intern}{Berkeley, California}
+\begin{rSubsection}{LeapYear}{October 2015 - December 2015}{Machine Learning Consultant}{Berkeley, California}
 \item Theorized and implemented $\epsilon$-differentially private deep neural network algorithm in Python.
 \item Working with team on web-api using Django RESTful.
 \end{rSubsection}
@@ -78,12 +92,11 @@ Overall GPA: 3.9 (18 units) \\
 \item Parallelized C++ finite element solver using OpenMP and Blelloch Scans.
 \end{rSubsection}
 
-\begin{rSubsection}{Lost Code Studios}{August 2012 - June 2014}{Lead Developer}{Salt Lake City, Utah}
+\begin{rSubsection}{Lost Code Studios}{August 2012 - June 2014}{Lead Game Developer}{Salt Lake City, Utah}
 \item Published \texttt{Space Hordes} to Xbox Live Indie Marketplace
 \item Created component oriented entity framework, \texttt{GameLib/GameLibJ} for game development in C\# and Java.
 \item First prize in IGDA Salt Lake City - Global Game Jam (2013,2014).
 \end{rSubsection}
-
 
 
 %------------------------------------------------
@@ -92,30 +105,54 @@ Overall GPA: 3.9 (18 units) \\
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%   TECHNICAL STRENGTHS SECTION
+%   Projects, Publications, Presentations
 %----------------------------------------------------------------------------------------
+\clearpage
+
+\begin{rSection}{Projects, Publications, Presentations}
+
+\begin{rSubsection}{Parameter Reduction using Generalized Neural Networks}{May 2016}{Microsoft Research Symposium}{Berkeley, California}	
+\item {Awarded Microsoft Research Grant}
+\item \emph{Abstract: }Classification and prediction tasks
+on high resolution continuous data require models with \emph{exponentially many parameters}.
+In this paper we generalize artificial neural networks to infinite dimensional Banach spaces to attack the curse of dimensionality. Using this new class of algorithms, $\{\mathcal{G}\}$, 
+we prove a new universal approximation theorem for bounded continuous operators and show that this new functional representation
+of weights is invariant to the number of samples.
+\end{rSubsection}
+
+\begin{rSubsection}{Universal Approximation of Nonlinear Operators on Banach Space}{April 2016}{Machine Learning at Berkeley EOS}{Berkeley, California}
+\item \emph{Abstract: }Using notions developed in (Cybenko, 1955) we present a proof for universal approximation of nonlinear operators on infinite dimensional banach space. In particular, we show that the set of operator neural networks span a dense subset space of bounded continuous operators on a locally compact Banach space $X$ and therefore arbitrarily approximate $K: X \to X $.
+\end{rSubsection}
+
+\begin{rSubsection}{
+OpenBrain: Massively Asynchronous Neurocomputation}{In Progress}{Machine Learning at Berkeley}{Berkeley, California}
+\item \emph{Abstract: } In this paper we introduce a new framework and philosophy for recurrent neurocomputation. By requiring that all neurons act asynchrynously and independently, we introduce a new metric for evaluating the universal intelligence of continuous time agents. We proved representation and universal approximation results in this context which lead to a set of learning rules in the spirt of John Conway's game of life. Finally evaluate this framework against different intelligent agent algorithms by implementing an approximate universal intelligence measure for agents embedded in turing computable environments in Minecraft, BF, and a variety of other reference machines. 
+\end{rSubsection}
+
+\begin{rSubsection}{Continuous Control using Functional Neural Networks}{In Progress}{Machine Learning at Berkeley}{Berkeley, California}
+\item \emph{Abstract: }The problem of continuous control in deep reinforcement learning has recently seen great advances by using the actor-critic model. Since the $Q$ function for continuous control is defined as a function $Q: S \times \mathbb{R} \to \mathbb{R}$, the action-$Q$ function is a map $Q_A: S \to C(E \subset \mathbb{R})$, which cannot be learned with deep neural networks. Since however, $Q_A$ is entirely expressible using a newly proposed generalization, functional neural networks, we apply $\{F\}$ to the task of continuous control and see marked improvement over traditional DDPG approaches.
+\end{rSubsection}
+
+
+\begin{rSubsection}{Functional Neural Networks Evaluated by Weierstrass Polynomials}{April 2015}{Intel ISEF}{Berkeley, California}
+\item{ Honorable Mention (AAAI '15)}
+\item \emph{Abstract: }In this paper we consider the traditional model of feed-forward neural networks proposed in (McCulloch and Pitts, 1949), and using intuitions developed in (Neal, 1994) we propose a method generalizing discrete neural networks as follows. In the standardized case, neural mappings $\mathcal{N}: \mathbb{R}^n \to [0,1]^m$ have little meaning when $n \to \infty$. Thus we consider a new construction $\mathcal{F}: \mathcal{X} \to \mathcal{Y}$ where the domain and codomain of $\mathcal{N}$ become infinite dimensional Hilbert spaces, namely the set of quadratically Lebesgue integrable functions $L^2$ over a real interval $E$ and $[0,1]$ respectively. The derivation of this construction is intuitively similar to that of Lebesgue integration; that is, $\sum_i \sigma_i w_{ij} \to \int_{E\subset\mathbb{R}}\sigma(i)w(i,j)\ d\mu(s)$. 
+\end{rSubsection}
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%   Technical Skills
+%----------------------------------------------------------------------------------------
+
 
 \begin{rSection}{Technical Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 Computer Languages & C\#, Java, C++, Python, JavaScript,  LaTex, PHP,, \\
-Protocols \& APIs & XNA, LINQ, Ember.JS, JSON, Windows Phone Development, Node.JS \\
+Protocols \& APIs &Tensorflow, Neon, Caffe, SciPy, LINQ, Ember.JS, Node.JS \\
 Tools & Git, Visual Studio, Eclipse, Sublime, IDLE, SVN, Heroku \\
-Github Score & 473
 \end{tabular}
 
 \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%   EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
